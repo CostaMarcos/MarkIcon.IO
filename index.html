@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon">
+    <title>MarkIcon.IO</title>
+</head>
+
+<body>
+    <container class="App"> <!-- Contêiner que irá conter toda a aplicação, para manipulação pelo Vue.JS -->
+        <header class="Header"> <!-- Cabeçalho do Site -->
+            <img class="logo" src="./img/logo.svg" alt="MarkIcon.IO"> <!-- Logo do site -->
+            <h1 class="title">MarkIcon.IO</h1> <!-- Nome do site -->
+            <h3 class="subtitle">Ícones para usar no GitHub</h3> <!-- Subtítulo da página -->
+            <!-- Caixa de pesquisa usada para encontrar os ícones. -->
+            <!-- O atributo "v-model" é um atributo do Vue.JS, usado para manipular a variável "search_query", que fica no objeto data.search_query, retornado pela aplicação. -->
+            <input class="search" type="search" placeholder="Digite aqui o nome da marca..." v-model="search_query">
+        </header>
+    
+        <!-- Seção para separar o cabeçalho da seção de ícones. A notação abaixo é usada para atualização em tempo real do total de ícones encontrados. -->
+        <section class="Section-Package">{{ result_query.length }} Ícones Listados</section>
+    
+        <!-- Seção que mostrará os ícones da aplicação -->
+        <section class="Section-Icon">
+            <!-- Cartão do ícone. -->
+            <!-- Esse trecho irá de replicar de acordo com o retorno do backend, e ao ser clicado, irá capturar o item e abrir um modal -->
+            <!-- O atributo ":class" define uma cor única, para cada cartão, de acordo com a cor predominante do ícone -->
+            <div class="icon-card" :class="item.hover" v-for="item in result_query" @click="capture_item(item)">
+                <img v-bind:src="item.image"> <!-- Imagem da marca -->
+                <p>{{ item.title }}</p> <!-- Nome da marca -->
+            </div>
+
+            <!-- Caso não seja achado nenhum ícone de acordo com os critérios de busca, esse trecho será executado, de acordo com o atributo "v-if" descrito abaixo -->
+            <div class="not-found-message" v-if="result_query.length == 0">
+                <img src="./img/error.svg" alt="Nada Encontrado!"> <!-- Ícone de atenção -->
+                <p>Não foi encontrada nenhuma tecnologia de acordo com os critérios de pesquisa passados acima!</p> <!-- Descrição, dizendo que nada foi encontrado -->
+            </div>
+
+            <!-- Modal do ícone, que irá aparecer quando um cartão for clicado, ou seja, quando a variável "show_card_model", do atributo "v-if", for igual ao booleado "true" -->
+            <div class="fade-background" v-if="show_card_modal"> <!-- Trecho que fará com que o fundo do modal escureça -->
+                <div class="table-cell"> <!-- Trecho para fins de alinhamento do modal no centro da tela -->
+                    <div class="modal-box"> <!-- Trecho do modal em si -->
+                        <!-- Botão que irá fechar o modal, definindo a variável "show_card_modal" como false -->
+                        <button class="close-modal" @click="show_card_modal = false">X</button>
+
+                        <img v-bind:src="clicked_card.image"> <!-- Imagem do ícone -->
+                        <p>{{ clicked_card.title }}</p> <!-- Nome do ícone -->
+
+                        <select v-model="icon.selected_size"> <!-- Tag select que definirá o valor da variável "selected_icon_size", que será usado como valor da largura do ícone, na geração do link -->
+                            <option :value="null" disabled hidden>Selecione o tamanho do ícone...</option> <!-- Opção desabilitada e oculta, apenas para servir como descrição e validação, caso o usuário não escolha um valor -->
+                            <option value="50">Pequeno</option>
+                            <option value="75">Médio</option>
+                            <option value="100">Grande</option>
+                            <option value="27">Tag MarkDown H1</option>
+                            <option value="20">Tag MarkDown H2</option>
+                            <option value="17">Tag MarkDown H3</option>
+                            <option value="13">Tag MarkDown H4</option>
+                            <option value="12">Tag MarkDown H5</option>
+                            <option value="11">Tag MarkDown H6</option>
+                            <option value="14">Texto MarkDown Normal</option>
+                            <option value="custom">Tamanho Personalizado</option> <!-- Opção para inserção de um valor personalizado de largura, que consequentemente definirá a altura também do ícone, na geração do link -->
+                        </select>
+
+                        <br>
+
+                        <!-- Caixa de texto que será usada para a inserção do tamanho personalizado do ícone -->
+                        <div class="custom_size_input" v-if="icon.selected_size == 'custom'">
+                            <!-- Caso no Select acima, seja selecionada a opção de tamanho personalizado, outra variável será manipulada -->
+                            <input type="text" placeholder="Insira o tamanho aqui..." v-model="icon.inputed_size">
+                            <!-- Descrição para informar o usuário como os valores devem ser inseridos -->
+                            <p><strong>ATENÇÃO:</strong> Somente números inteiros ou reais são aceitos. Casas decimais devem usar ponto em vez de vírgula. O tamanho personalizado define tanto a altura quanto a largura do ícone, já que os mesmos tem lados com tamanhos iguais.</p>
+                        </div>
+
+                        <br>
+
+                        <!-- Botão que irá chamar a função da aplicação para geração do link do ícone, para ser inserido no MarkDown -->
+                        <button class="generate-link" @click="validate_width">Gerar Link</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        
+        <footer class="Footer"> <!-- Rodapé da aplicação -->
+            <p style="justify-self: start; margin-left: 25px;">Criado e Desenvolvido Por <a style=" text-decoration: none; color: gray;" href="https://github.com/LucasCastro99">Lucas Castro</a></p>
+            <p>MarkIconIO - 2020</p> <!-- Nome da aplicação e ano que ela foi desenvolvida -->
+            <p style="justify-self: end; margin-right: 25px;"><a style=" text-decoration: none; color: gray;" href="https://github.com/LucasCastro99/MarkIconIO">Repositório do Projeto</a></p>
+        </footer>
+    </container>
+
+    <!-- Importação dos scripts necessários para a aplicação -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script> <!-- Importação externa do Vue.JS -->
+    <script src="./vue-clipboard.min.js"></script> <!-- Importação interna do Vue Clipboard 2 -->
+    <script src="./main.js"></script> <!-- Importação interna do arquivo de script principal da aplicação -->
+</body>
+
+</html>
