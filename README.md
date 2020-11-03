@@ -21,7 +21,17 @@
 <h5 align="center">:warning: Status do Projeto: Em Desenvolvimento :warning:</h5>
 
 ## :mag_right: ÍNDICE
+* [PRIMEIROS PASSOS](#triangular_flag_on_post-primeiros-passos)
+  * [Pré-Requisitos](#triangular_flag_on_post-primeiros-passos)
+  * [Executando o Projeto](#triangular_flag_on_post-primeiros-passos)
+* [DESENVOLVIDO COM](#hammer_and_wrench-desenvolvido-com)
+* [SERVIÇOS USADOS](#cloud-serviços-usados)
+* [AUTOR](#nerd_face-autor)
+* [LICENÇA](#memo-licença)
+## :triangular_flag_on_post: PRIMEIROS PASSOS
+### :grey_exclamation: Pré-Requisitos
+### :play_or_pause_button: Executando o Projeto
 ## :hammer_and_wrench: DESENVOLVIDO COM
 ## :cloud: SERVIÇOS USADOS
 ## :nerd_face: AUTOR
-## :memo: LINCENÇA
+## :memo: LICENÇA
