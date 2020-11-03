@@ -21,17 +21,38 @@
 <h5 align="center">:warning: Status do Projeto: Em Desenvolvimento :warning:</h5>
 
 ## :mag_right: ÍNDICE
+* [SOBRE O PROJETO](#thought_balloon-sobre-o-projeto)
 * [PRIMEIROS PASSOS](#triangular_flag_on_post-primeiros-passos)
-  * [Pré-Requisitos](#triangular_flag_on_post-primeiros-passos)
-  * [Executando o Projeto](#triangular_flag_on_post-primeiros-passos)
+  * [Pré-Requisitos](#grey_exclamation-pré-requisitos)
+  * [Executando o Projeto](#play_or_pause_button-executando-o-projeto)
 * [DESENVOLVIDO COM](#hammer_and_wrench-desenvolvido-com)
 * [SERVIÇOS USADOS](#cloud-serviços-usados)
 * [AUTOR](#nerd_face-autor)
 * [LICENÇA](#memo-licença)
+
+## :thought_balloon: SOBRE O PROJETO
+Este projeto nasceu como uma forma de dar uma personalizada a mais em arquivos MarkDown do GitHub. Ele foi desenvolvido para ser uma aplicação web, onde usuários do GitHub pudessem escolher um ícone e inserí-los, no tamanho adequando ou desejado, de forma simples e rápida, como um copiar e colar.
+
 ## :triangular_flag_on_post: PRIMEIROS PASSOS
+
 ### :grey_exclamation: Pré-Requisitos
+Nada mais do que um navegador(preferência Firefox) e internet é necessário para executar esse projeto.
+
 ### :play_or_pause_button: Executando o Projeto
+Para a execução do projeto é bem simples, basta abrir o arquivo index.html, que é o arquivo da página única e principal do projeto, em um navegador para executar a aplicação, junto com seus mecanismos do Vue
+
 ## :hammer_and_wrench: DESENVOLVIDO COM
+- [Vue](https://vuejs.org/) - Framework JavaScript de código-aberto, focado no desenvolvimento de interfaces de usuário e aplicativos de página única.
+- [Vue Clipboard 2](https://www.npmjs.com/package/vue-clipboard2) - Biblioteca usado pelo Vue para copiar textos para a área de transferência.
+
 ## :cloud: SERVIÇOS USADOS
+- [GitHub](https://github.com/) - Website online para armazenamento de código que usam o sistema de versionamento Git.
+
 ## :nerd_face: AUTOR
+<p align="center">
+  <img src="https://scontent-gig2-1.xx.fbcdn.net/v/t1.0-9/109824217_2691559037795111_7746659220092914184_n.jpg?_nc_cat=104&ccb=2&_nc_sid=09cbfe&_nc_ohc=8czfqj84amEAX-2sKl9&_nc_ht=scontent-gig2-1.xx&oh=fa711f49f83ab06bb1f87aa2783b2534&oe=5FC6CBA8" alt="Autor do Projeto: Lucas Castro" width="150">
+  <a href="https://github.com/LucasCastro99"><h5 align="center">Lucas Castro</h5></a>
+</p>
+  
 ## :memo: LICENÇA
+Este projeto é licenciado sobre os termos da MIT License. Veja o [arquivo de licença](LICENSE.md) para mais detalhes sobre o licenciamento desse projeto.
