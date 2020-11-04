@@ -27,8 +27,11 @@
   * [Executando o Projeto](#play_or_pause_button-executando-o-projeto)
 * [DESENVOLVIDO COM](#hammer_and_wrench-desenvolvido-com)
 * [SERVIÇOS USADOS](#cloud-serviços-usados)
+* [CONTRIBUIÇÕES](#heart-contribuições)
 * [AUTOR](#nerd_face-autor)
 * [LICENÇA](#memo-licença)
+* [DOAÇÕES](#muscle-doações)
+* [INSPIRAÇÕES](#bulb-inspirações)
 
 ## :thought_balloon: SOBRE O PROJETO
 Este projeto nasceu como uma forma de dar uma personalizada a mais em arquivos MarkDown do GitHub. Ele foi desenvolvido para ser uma aplicação web, onde usuários do GitHub pudessem escolher um ícone e inserí-los, no tamanho adequando ou desejado, de forma simples e rápida, como um copiar e colar.
@@ -48,6 +51,9 @@ Para a execução do projeto é bem simples, basta abrir o arquivo index.html, q
 ## :cloud: SERVIÇOS USADOS
 - [GitHub](https://github.com/) - Website online para armazenamento de código que usam o sistema de versionamento Git.
 
+## :heart: CONTRIBUIÇÕES
+Este projeto no momento não está apto para receber contribuições, mas talvez, logo logo ele esteja, então atribua uma estrela a ele no canto superior direito desta tela e acompanhe as atualizações dele, caso esteja interessado em contribuir.
+
 ## :nerd_face: AUTOR
 <p align="center">
   <img src="https://scontent-gig2-1.xx.fbcdn.net/v/t1.0-9/109824217_2691559037795111_7746659220092914184_n.jpg?_nc_cat=104&ccb=2&_nc_sid=09cbfe&_nc_ohc=8czfqj84amEAX-2sKl9&_nc_ht=scontent-gig2-1.xx&oh=fa711f49f83ab06bb1f87aa2783b2534&oe=5FC6CBA8" alt="Autor do Projeto: Lucas Castro" width="150">
@@ -56,3 +62,10 @@ Para a execução do projeto é bem simples, basta abrir o arquivo index.html, q
   
 ## :memo: LICENÇA
 Este projeto é licenciado sobre os termos da MIT License. Veja o [arquivo de licença](LICENSE.md) para mais detalhes sobre o licenciamento desse projeto.
+
+## :muscle: DOAÇÕES
+Este projeto é gratuito, e não o construí para fins de arrecadação. Mas caso queira doar, é só [acessar meu perfil](https://github.com/LucasCastro99), ver minhas formas de contato e me contactar, que terei prazer em atendê-lo.
+
+## :bulb: INSPIRAÇÕES
+- [VSCode Icons](https://github.com/vscode-icons/vscode-icons) - Pacote de ícones variados e Open Source para o Visual Studio Code.
+- [VSCode Material Design Icon Theme](https://github.com/PKief/vscode-material-icon-theme) - Pacote de ícones variados e Open Source, baseados no Material Design da Google, para o Visual Studio Code.
