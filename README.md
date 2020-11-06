@@ -22,6 +22,7 @@
 
 ## :mag_right: ÍNDICE
 * [SOBRE O PROJETO](#thought_balloon-sobre-o-projeto)
+* [LAYOUT E DESIGN](#art-layout-e-design)
 * [PRIMEIROS PASSOS](#triangular_flag_on_post-primeiros-passos)
   * [Pré-Requisitos](#grey_exclamation-pré-requisitos)
   * [Executando o Projeto](#play_or_pause_button-executando-o-projeto)
@@ -35,6 +36,11 @@
 
 ## :thought_balloon: SOBRE O PROJETO
 Este projeto nasceu como uma forma de dar uma personalizada a mais em arquivos MarkDown do GitHub. Ele foi desenvolvido para ser uma aplicação web, onde usuários do GitHub pudessem escolher um ícone e inserí-los, no tamanho adequando ou desejado, de forma simples e rápida, como um copiar e colar.
+
+## :art: LAYOUT E DESIGN
+<a href='https://github.com/LucasCastro99/MarkIcon.IO'><img title='Tela Principal' alt='Home Page Screen' width='100%' src='https://user-images.githubusercontent.com/32255595/98386050-1e0dd080-2026-11eb-8f65-240070ec75dd.png'></a>
+<a href='https://github.com/LucasCastro99/MarkIcon.IO'><img title='Seção de Ícones' alt='Icons Section Screen' width='49.7%' height="300px" src='https://user-images.githubusercontent.com/32255595/98386082-26fea200-2026-11eb-945a-9b9d15765841.png'></a>
+<a href='https://github.com/LucasCastro99/MarkIcon.IO'><img title='Modal de Geração de Link' alt='Modal Link Screen' width='49.7%' height="300px" src='https://user-images.githubusercontent.com/32255595/98386092-2a922900-2026-11eb-92c2-119a9cd59736.png'></a>
 
 ## :triangular_flag_on_post: PRIMEIROS PASSOS
 
